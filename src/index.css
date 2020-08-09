@@ -5,6 +5,17 @@ body {
     background-attachment: fixed;
 }
 
+a {
+    text-decoration: none;
+    color: #354548;
+
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
 .container {
     padding-top: 50px;
 }
@@ -14,18 +25,89 @@ body {
 }
 
 
-.app__sidebar {
-    background-color: #fff;
-    height: 100%;
-    border-radius: 20px;
-    padding: 25px 15px;
-    box-shadow: 0 0 10px black;
-}
+
 
 .app__main-content {
     background-color: #fff;
     border-radius: 20px;
     padding: 25px 15px;
     box-shadow: 0 0 10px black;
+}
 
+/* sidebar */
+.sidebar {
+    background-color: #fff;
+    height: 100%;
+    border-radius: 20px;
+    padding: 25px 15px;
+    box-shadow: 0 0 10px black;
+    text-align: center;
+}
+
+.sidebar__avatar {
+    height: 110px;
+    width: 120px;
+    object-fit: contain;
+    border-radius: 30px;
+}
+
+.sidebar__icon {
+    width: 25px;
+    height: 25px;
+}
+
+.sidebar__name {
+    font-family: 'Kaushan Script';
+    margin: 20px 0;
+    font-size: 1.7rem;
+}
+
+.sidebar__name>span {
+    color: #00F260;
+}
+
+.sidebar__item {
+    margin-bottom: 6px;
+    padding-top: 6px;
+    height: 40px;
+    font-size: 1.05rem;
+    border-radius: 30px;
+}
+
+.sidebar__title {
+    background-color: #f1f1f1;
+    border-radius: 30px;
+}
+
+.sidebar__contact {
+    background-color: #dbdddf;
+    padding: 2px 0;
+    margin: 20px -15px;
+
+}
+
+.sidebar__email {
+    background-image: linear-gradient(to right bottom, #00F260, #0575E6);
+
+    border-radius: 30px;
+    color: #fff;
+    margin: 15px 25px 0px;
+    cursor: pointer;
+    transition: all 3s linear;
+}
+
+.sidebar__email:hover {
+    transform: scale(1.2);
+}
+
+.sidebar__github:hover,
+.sidebar__resume:hover {
+    background-color: #f1f1f2;
+    color: #000;
+}
+
+@media(max-width:991px) {
+    .app__main-content {
+        margin: 30px 0;
+    }
 }
