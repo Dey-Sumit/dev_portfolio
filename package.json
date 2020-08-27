@@ -4,8 +4,10 @@
   "private": true,
   "dependencies": {
     "cra-template": "1.0.3",
+    "framer-motion": "^2.4.3-beta.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {
@@ -28,5 +30,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.20.6"
   }
 }

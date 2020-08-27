@@ -7,7 +7,7 @@ import repair from '../assets/icons/repair.svg'
 import puzzle from '../assets/icons/puzzle.svg'
 
 import Skillcard from './Skillcard';
-
+import { motion } from 'framer-motion'
 const skills = [
     {
         icon: computer,
@@ -43,8 +43,31 @@ const skills = [
 
 
 const About = () => {
+    const about_variants = {
+        hidden: {
+            opacity: 0
+        },
+        visible: {
+            opacity: 1,
+            transition: {
+                dealy: 0.2, duration: 0.6,
+            }
+        },
+        exit: {
+            opacity: 0,
+            transition: {
+                ease: 'easeInOut'
+            }
+        }
+    }
     return (
-        <div className="about">
+        <motion.div className="about"
+
+            variants={about_variants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+        >
             <h6 className="about__intro">
                 I describe myself as someone who's persistant, a quick learner and loves problem solving by using simple and scalable solutions.
             </h6>
@@ -59,7 +82,7 @@ const About = () => {
                     }
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

@@ -1,69 +1,38 @@
 import React from 'react';
-import react from '../assets/icons/react.svg'
-import python from '../assets/icons/python.svg'
+
 import Bar from './Bar';
-
-const languages = [
-    {
-        icon: python,
-        name: 'Python',
-        level: '45'
-    },
-    {
-        icon: react,
-        name: 'Java',
-        level: '60'
-    },
-    {
-        icon: react,
-        name: 'HTML',
-        level: '80'
-    },
-    {
-        icon: react,
-        name: 'react',
-        level: '60'
-    },
-    {
-        icon: react,
-        name: 'Django',
-        level: '80'
-    },
-    {
-        icon: react,
-        name: 'Bootstrap',
-        level: '80'
-    }
-]
-
-const tools = [
-    {
-        icon: react,
-        name: 'Figma',
-        level: '85'
-    },
-    {
-        icon: react,
-        name: 'Photoshop',
-        level: '45'
-    },
-    {
-        icon: react,
-        name: 'Illustrator',
-        level: '60'
-    },
-    {
-        icon: react,
-        name: 'Framer',
-        level: '45'
-    },
-
-]
+import { motion } from 'framer-motion'
+import { tools, languages } from './data/resume_data'
 
 
 const Resume = () => {
+
+    const resume_variants = {
+        hidden: {
+            opacity: 0
+        },
+        visible: {
+            opacity: 1,
+            transition: {
+                delay: 0.2, duration: 0.6,
+            }
+        },
+        exit: {
+            opacity: 0,
+            transition: {
+                ease: 'easeInOut'
+            }
+        }
+    }
     return (
-        <div className="container resume">
+        <motion.div className="container resume"
+
+            variants={resume_variants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+
+        >
             <div className="row">
                 <div className="col-lg-6 resume-card" >
                     <h4 className="resume-card__heading">
@@ -119,7 +88,7 @@ const Resume = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

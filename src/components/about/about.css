@@ -1,0 +1,24 @@
+/* about */
+
+.about {
+    padding: 20px;
+    margin: -35px;
+}
+
+.about__intro {
+    font-size: 1rem;
+    padding: 20px 28px;
+    margin: 10px 0;
+}
+
+.about__container {
+    background-color: #dbdddf;
+    padding: 30px 20px;
+}
+
+.about__heading {
+    font-size: 25px;
+    font-weight: 700;
+    color: #354358;
+    margin-left: 10px;
+}
